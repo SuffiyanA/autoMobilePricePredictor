@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Futuristic Form</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      padding-top: 70px;
+      padding-bottom: 70px;
+    }
+
+    header, footer {
+      background-color: #333;
+      padding: 10px 0;
+    }
+
+    header h1, footer p {
+      text-align: center;
+    }
+
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Futuristic Form</h1>
+  </header>
+
+  <!-- Inside the form tag -->
+<form method="POST">
+    {% csrf_token %}
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="field1">HighWay Miles per Gallon</label>
+            <input type="number" step="0.01" class="form-control" name="highway-mpg" value=30.78>
+          </div>
+          <div class="form-group">
+            <label for="field1">City Miles per Gallon</label>
+            <input type="number" step="0.01" class="form-control" name="city-mpg" value=25.32>
+          </div>
+          <div class="form-group">
+            <label for="field1">Number of Cylinders</label>
+            <input type="number" step="0.01" class="form-control" name="num-of-cylinders" value=4>
+          </div>
+          <div class="form-group">
+            <label for="field1">Horsepower</label>
+            <input type="number" step="0.01" class="form-control" name="horsepower" value=103.48>
+          </div>
+          <div class="form-group">
+            <label for="field1">Engine-Size</label>
+            <input type="number" step="0.01" class="form-control" name="engine-size" value=128.12>
+          </div>
+          <div class="form-group">
+            <label for="field1">Stroke</label>
+            <input type="number" step="0.01" class="form-control" name="stroke" value=3>
+          </div>
+          <div class="form-group">
+            <label for="field1">Bore</label>
+            <input type="number" step="0.01" class="form-control" name="bore" value=3.33>
+          </div>
+          <!-- Repeat similar form-groups for fields 2 to 7 -->
+  
+          <div class="form-group">
+            <label for="make">Make</label>
+            <select class="form-control" name="make">
+              <option value='make_alfa-romero'>alfa-romero</option>
+              <option value='make_audi'>Audi</option>
+              <option value='make_bmw'>BMW</option>
+              <option value='make_chevrolet'>Chevrolet</option>
+              <option value='make_dodge'>Dodge</option>
+              <option value='make_honda'>Honda</option>
+              <option value='make_isuzu'>Isuzu</option>
+              <option value='make_jaguar'>Jaguar</option>
+              <option value='make_mazda'>Mazda</option>
+              <option value='make_mercedes-benz'>Mercedes</option>
+              <option value='make_mercury'>Mercury</option>
+              <option value='make_mitsubishi'>Mitsubishi</option>
+              <option value='make_nissan'>Nissan</option>
+              <option value='make_peugot'>Peugot</option>
+              <option value='make_plymouth'>Plymouth</option>
+              <option value='make_porsche'>Porsche</option>
+              <option value='make_saab'>Saab</option>
+              <option value='make_subaru'>Subaru</option>
+              <option value='make_toyota'>Toyota</option>
+              <option value='make_volkswagen'>Volkswagen</option>
+              <option value='make_volvo'>Volvo</option>
+            </select>
+          </div>
+  
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="field1">Curb Weight</label>
+                <input type="number" step="0.01" class="form-control" name="curb-weight" value=2561.5>
+              </div>
+              <div class="form-group">
+                <label for="field1">Width</label>
+                <input type="number" step="0.01" class="form-control" name="width" value=65.89>
+              </div>
+              <div class="form-group">
+                <label for="field1">Length</label>
+                <input type="number" step="0.01" class="form-control" name="length" value=174.32>
+              </div>
+              <div class="form-group">
+                <label for="field1">Wheelbase</label>
+                <input type="number" step="0.01" class="form-control" name="wheel-base" value=98.92>
+              </div>
+              <div class="form-group">
+                <label for="make">Body-Style</label>
+                <select class="form-control" name="body-style">
+                    <option value='body-style_convertible'>Convertible</option>
+                    <option value='body-style_hardtop'>Hardtop</option>
+                    <option value='body-style_hatchback'>Hatchback</option>
+                    <option value='body-style_sedan'>Sedan</option>
+                    <option value='body-style_wagon'>Wagon</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="make">Fuel Type</label>
+                <select class="form-control" name="fuel-type">
+                    <option value='fuel-type_diesel'>Diesel</option>
+                    <option value='fuel-type_gas'>Gas</option>
+
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="make">Fuel System</label>
+                <select class="form-control" name="fuel-system_encoded">
+                    <option value=0>1bbl (Single Barrel Carburetor)</option>
+                    <option value=1>2bbl (Two-Barrel Carburetor)</option>
+                    <option value=2>spfi (Single Point Fuel Injection)</option>
+                    <option value=3>mpfi (Multi-Point Fuel Injection)</option>
+                    <option value=4>mfi (Mechanical Fuel Injection)</option>
+                    <option value=5>spdi (Sequential Port Fuel Injection)</option>
+                    <option value=6>idi (Indirect Injection)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="make">Engine Type</label>
+                <select class="form-control" name="engine-type_encoded">
+                    <option value=0>l (Inline Engine)</option>
+                    <option value=1>ohcv (Overhead Valve, with Camshaft in Block)</option>
+                    <option value=2>ohc (Overhead Camshaft)</option>
+                    <option value=3>ohcf (Overhead Camshaft with Hemispherical Combustion Chambers)</option>
+                    <option value=4>dohc (Dual Overhead Camshaft)</option>
+                </select>
+              </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="form-group text-center">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </form>
+  {% if predicted %}
+  <div class="container mt-4">
+    <div class="form-group text-center">
+      <h3>Your Predicted Car Price is: {{predicted}}</h3>
+    </div>
+  </div>
+  {% endif %}
+  
+
+  <footer>
+    <p>&copy; 2024 Futuristic Form</p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
